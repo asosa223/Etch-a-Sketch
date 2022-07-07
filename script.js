@@ -15,9 +15,43 @@ function makeRows(rows, cols) {
 
     for (c = 0; c < (rows * cols); c++){
         let cell = document.createElement('div');
-        cell.innerText = c + 1;
+        //cell.innerText = c + 1;
         container.appendChild(cell).className = 'grid-item';
     };
 };
 
+function changeColor() {
+    const item = document.querySelectorAll('.grid-item');
+    
+    item.forEach(i => {
+        i.addEventListener('mouseover', (e)=>{
+            i.style.backgroundColor = 'black';
+        });
+        
+    });
+}
+
+function gridSizeRow() {
+    let row = prompt(`Please enter number of rows`);
+
+    if (row < 100 && !null) {
+        return console.log(row);
+    }
+    else {
+        return console.log('ERROR');
+    }
+}
+
+function gridSizeCol() {
+    let col = prompt(`Please enter number of columns`);
+
+    if (col < 100 && !null) {
+        return console.log(col);
+    }
+    else {
+        return console.log('ERROR');
+    }
+}
+
 makeRows(16, 16);
+changeColor();
