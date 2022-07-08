@@ -18,6 +18,8 @@ function makeRows(rows, cols) {
         //cell.innerText = c + 1;
         container.appendChild(cell).className = 'grid-item';
     };
+
+    changeColor();
 };
 
 function changeColor() {
@@ -27,31 +29,23 @@ function changeColor() {
         i.addEventListener('mouseover', (e)=>{
             i.style.backgroundColor = 'black';
         });
+        /*i.addEventListener('mousedown', (e)=>{
+            i.style.backgroundColor = 'black'
+        });*/
         
     });
 }
 
-function gridSizeRow() {
-    let row = prompt(`Please enter number of rows`);
+function gridSize() {
+    let size = prompt(`Please enter size of grid(Ex: 16 = 16x16)`);
 
-    if (row < 100 && !null) {
-        return console.log(row);
+    if (size < 100 && !null) {
+        return makeRows(size, size);
     }
     else {
-        return console.log('ERROR');
+        return alert('ERROR');
     }
 }
 
-function gridSizeCol() {
-    let col = prompt(`Please enter number of columns`);
-
-    if (col < 100 && !null) {
-        return console.log(col);
-    }
-    else {
-        return console.log('ERROR');
-    }
-}
 
 makeRows(16, 16);
-changeColor();
