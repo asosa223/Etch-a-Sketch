@@ -15,7 +15,6 @@ function makeRows(rows, cols) {
 
     for (c = 0; c < (rows * cols); c++){
         let cell = document.createElement('div');
-        //cell.innerText = c + 1;
         container.appendChild(cell).className = 'grid-item';
     };
 
@@ -40,7 +39,9 @@ function gridSize() {
     let size = prompt(`Please enter size of grid(Ex: 16 = 16x16)`);
 
     if (size < 100 && !null) {
-        return makeRows(size, size);
+        let squares = container.querySelectorAll('div'); //selects all cells created before
+        squares.forEach((div) => div.remove());          //removes each cell created
+        makeRows(size, size);                            //creates new user inputted grid
     }
     else {
         return alert('ERROR');

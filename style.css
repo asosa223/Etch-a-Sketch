@@ -40,10 +40,26 @@ h1 {
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    box-shadow: 5px 5px  5px lightslategray;
+ }
+
+ .options {
+   display: flex;
+   justify-content: space-evenly;
+   padding: 10px 0px;
+ }
+
+ .options button {
+   padding: 20px;
  }
 
  .grid-item {
-    border: 2px solid black;
-    text-align: center;
-    padding: 20px;
- }
+   /*border: 2px solid black;*/
+   text-align: center;
+   /* padding: 20px; */
+   /* width: 2px; */
+   /* height: 2px; */
+}
