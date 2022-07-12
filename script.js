@@ -25,16 +25,43 @@ function makeRows(rows, cols) {
 
 function changeColor() {
     const item = document.querySelectorAll('.grid-item');
+    let black = document.querySelector('#black');
+    let erase = document.querySelector('#erase');
+    let color = document.querySelector('#color');
+    let h2 = document.querySelector('h2');
     
-    item.forEach(i => {
-        i.addEventListener('mouseover', (e)=>{
-            i.style.backgroundColor = 'black';
+    //click black button, activates black ink on sketch pad
+    black.addEventListener('click', (e) => {
+        h2.innerText = '';
+        item.forEach(i => {
+            i.addEventListener('mouseover', (e) => {
+                i.style.backgroundColor = 'black';
+            });
         });
-        /*i.addEventListener('mousedown', (e)=>{
-            i.style.backgroundColor = 'black'
-        });*/
-        
     });
+
+    //click erase button, activates white ink on sketch pad
+    erase.addEventListener('click', (e) => {
+        h2.innerText = '';
+        item.forEach(i => {
+            i.addEventListener('mouseover', (e) => {
+                i.style.backgroundColor = 'white';
+            });
+        });
+    });
+
+    //click color button, activates random color ink on sketch pad
+    color.addEventListener('click', (e) => {
+        h2.innerText = '';
+        item.forEach(i => {
+            i.addEventListener('mouseover', (e) => {
+                i.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            });
+        });
+    });
+    
+
+
 }
 
 function gridSize() {
@@ -43,7 +70,7 @@ function gridSize() {
     if (size < 100 && !null) {
         let squares = container.querySelectorAll('div'); //selects all cells created before
         squares.forEach((div) => div.remove());          //removes each cell created
-        makeRows(size, size);                            //creates new user inputted grid
+        makeRows(size, size);                            //creates new user inputted grid                             
     }
     else {
         return alert('ERROR');

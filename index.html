@@ -11,12 +11,13 @@
     <div class="header">
         <h1>Etch-a-Sketch</h1>
         <button class='grid-size-btn' onclick="gridSize()">Create New Grid</button>
+        <h2>Click any option to begin sketching</h2>
     </div>
     <div class="wrapper">
         <div class="options">
-            <button>Black</button>
-            <button>Erase</button>
-            <button>Color</button>
+            <button id="black" onclick="changeColor()">Black</button>
+            <button id="erase" onclick="changeColor()">Erase</button>
+            <button id="color" onclick="changeColor()">Color</button>
         </div>
         <div class="grid-wrap">
             <div class="grid-container"></div>
