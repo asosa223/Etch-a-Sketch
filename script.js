@@ -10,6 +10,7 @@
 const container = document.querySelector('.grid-container');
 
 function makeRows(rows, cols) {
+    let size = document.querySelector('.grid-size');
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
 
@@ -18,6 +19,7 @@ function makeRows(rows, cols) {
         container.appendChild(cell).className = 'grid-item';
     };
 
+    size.textContent = `${rows} x ${cols}`;
     changeColor();
 };
 

@@ -24,8 +24,8 @@
 
 .wrapper {
     display: flex;
-    justify-content: center;
-    padding: 40px 0px;
+    justify-content: space-evenly;
+    padding-top: 40px; 
 }
 
 h1 {
@@ -34,6 +34,11 @@ h1 {
 
 .grid-size {
    text-align: center;
+}
+
+.grid-wrap {
+   display: flex;
+   flex-direction: column;
 }
 
  .grid-container {
@@ -46,11 +51,17 @@ h1 {
     box-shadow: 5px 5px  5px lightslategray;
  }
 
+ .grid-size {
+   padding-top: 10px;
+   padding-bottom: 40px;
+ }
+
  .options {
    display: flex;
    justify-content: space-evenly;
    padding: 10px 0px;
- }
+   flex-direction: column;
+}
 
  .options button {
    padding: 20px;
