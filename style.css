@@ -10,8 +10,9 @@
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
-    /*background-color: rgb(255, 99, 71);*/
- }
+    background: linear-gradient(90deg, rgba(9,48,25,1) 14%, rgba(20,121,9,1) 35%, rgba(8,178,164,1) 76%); 
+    font-family: Arial;
+}
 
 .header {
    display: flex;
@@ -20,7 +21,35 @@
 }
 
 .grid-size-btn {
-   padding: 20px;
+   background: #889e79;
+   background-image: -webkit-linear-gradient(top, #889e79, #2bb89c);
+   background-image: -moz-linear-gradient(top, #889e79, #2bb89c);
+   background-image: -ms-linear-gradient(top, #889e79, #2bb89c);
+   background-image: -o-linear-gradient(top, #889e79, #2bb89c);
+   background-image: linear-gradient(to bottom, #889e79, #2bb89c);
+   -webkit-border-radius: 8;
+   -moz-border-radius: 8;
+   border-radius: 8px;
+   -webkit-box-shadow: 0px 1px 3px #666666;
+   -moz-box-shadow: 0px 1px 3px #666666;
+   box-shadow: 0px 1px 3px #666666;
+   font-family: Arial;
+   color: #010508;
+   font-size: 20px;
+   padding: 10px;
+   border: solid #68a1c4 2px;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.grid-size-btn:hover {
+   background: #dcdebd;
+   background-image: -webkit-linear-gradient(top, #dcdebd, #3498db);
+   background-image: -moz-linear-gradient(top, #dcdebd, #3498db);
+   background-image: -ms-linear-gradient(top, #dcdebd, #3498db);
+   background-image: -o-linear-gradient(top, #dcdebd, #3498db);
+   background-image: linear-gradient(to bottom, #dcdebd, #3498db);
+   text-decoration: none;
 }
 
 .wrapper {
@@ -50,6 +79,7 @@ h1 {
     height: 500px;
     border: 1px solid black;
     box-shadow: 5px 5px  5px lightslategray;
+    background-color: white;
  }
 
  .grid-size {
@@ -65,14 +95,38 @@ h1 {
    align-items: center;
 }
 
- .options button {
-   padding: 20px;
- }
+.options button {
+   background: #889e79;
+   background-image: -webkit-linear-gradient(top, #889e79, #2bb89c);
+   background-image: -moz-linear-gradient(top, #889e79, #2bb89c);
+   background-image: -ms-linear-gradient(top, #889e79, #2bb89c);
+   background-image: -o-linear-gradient(top, #889e79, #2bb89c);
+   background-image: linear-gradient(to bottom, #889e79, #2bb89c);
+   -webkit-border-radius: 8;
+   -moz-border-radius: 8;
+   border-radius: 8px;
+   -webkit-box-shadow: 0px 1px 3px #666666;
+   -moz-box-shadow: 0px 1px 3px #666666;
+   box-shadow: 0px 1px 3px #666666;
+   font-family: Arial;
+   color: #010508;
+   font-size: 25px;
+   padding: 10px;
+   border: solid #68a1c4 2px;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.options button:hover {
+   background: #dcdebd;
+   background-image: -webkit-linear-gradient(top, #dcdebd, #3498db);
+   background-image: -moz-linear-gradient(top, #dcdebd, #3498db);
+   background-image: -ms-linear-gradient(top, #dcdebd, #3498db);
+   background-image: -o-linear-gradient(top, #dcdebd, #3498db);
+   background-image: linear-gradient(to bottom, #dcdebd, #3498db);
+   text-decoration: none;
+}
 
  .grid-item {
-   /*border: 2px solid black;*/
    text-align: center;
-   /* padding: 20px; */
-   /* width: 2px; */
-   /* height: 2px; */
 }

@@ -8,6 +8,7 @@
  */
 
 const container = document.querySelector('.grid-container');
+const h2 = document.querySelector('h2');
 
 function makeRows(rows, cols) {
     let size = document.querySelector('.grid-size');
@@ -70,7 +71,8 @@ function gridSize() {
     if (size < 100 && !null) {
         let squares = container.querySelectorAll('div'); //selects all cells created before
         squares.forEach((div) => div.remove());          //removes each cell created
-        makeRows(size, size);                            //creates new user inputted grid                             
+        makeRows(size, size);                            //creates new user inputted grid
+        h2.innerText = 'Click any option to begin sketching';                                 
     }
     else {
         return alert('ERROR');
